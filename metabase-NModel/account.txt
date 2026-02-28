@@ -1,3 +1,0 @@
-name: nmodel
-email: nomdel@nmodel.com
-password: qwe123!@#
