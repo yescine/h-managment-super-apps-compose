@@ -1,0 +1,1 @@
+mongodump --uri="mongodb://root:example@mongodb:27017/admin?retryWrites=true&w=majority" --out=/tmp/admin-dump-2024-11-09 --collection profile_pages
