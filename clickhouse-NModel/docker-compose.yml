@@ -1,0 +1,21 @@
+services:
+  ch-server:
+    image: clickhouse/clickhouse-server:26.1-alpine
+    ports:
+      - "8123:8123"
+      - "9000:9000"
+    environment:
+      CLICKHOUSE_DEFAULT_ACCESS_MANAGEMENT: 1
+    volumes:
+      - ch_data:/var/lib/clickhouse
+      - ch_logs:/var/log/clickhouse-server
+    restart: on-failure
+    networks:
+      - internal
+
+volumes:
+  ch_data:
+  ch_logs:
+
+networks:
+  internal:
